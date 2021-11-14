@@ -1,0 +1,19 @@
+<h1> Contact with me!</h1>
+<hr>
+
+<form [formGroup]="myForm" (ngSubmit)="sendEmail()">
+
+  <!-- Name -->
+  <div class="mb-3 row">
+    <label class="col-sm-3 col-form-label">Name</label>
+    <div class="col-sm-9">
+      <input type="text" class="form-control" placeholder="Write your name" formControlName="name">
+      <span class="form-text text-danger" error-msg [valid]="myForm.get('name')?.touched || hasError('name')">
+
+      </span>
+    </div>
+  </div>
+</form>
+
+<h1> Form </h1>
+<pre>{{myForm.get('name')?.touched }}</pre>

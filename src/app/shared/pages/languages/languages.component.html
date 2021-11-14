@@ -1,0 +1,8 @@
+<div class="d-flex justify-content-end">
+  <p-avatar (click)="changeLanguage('cat')" [class.languageSelected]="selectedLanguage === 'cat'"
+            image="assets/flags/es-ct.svg" size="large" shape="circle" class="changeLanguage ms-1"></p-avatar>
+  <p-avatar (click)="changeLanguage('es')" [class.languageSelected]="selectedLanguage === 'es'"
+            image="assets/flags/es.svg" size="large" shape="circle" class="changeLanguage ms-1"></p-avatar>
+  <p-avatar (click)="changeLanguage('eng')" [class.languageSelected]="selectedLanguage === 'eng'"
+            image="assets/flags/gb.svg" size="large" shape="circle" class="changeLanguage ms-1"></p-avatar>
+</div>
