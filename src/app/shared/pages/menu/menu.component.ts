@@ -22,8 +22,7 @@ export class MenuComponent implements OnInit {
 
   ngOnInit() {
     this.sessionStorageObservable
-      .subscribe(data => {
-        console.log(data);
+      .subscribe(() => {
         this.updateDockItems();
       })
     this.updateDockItems();

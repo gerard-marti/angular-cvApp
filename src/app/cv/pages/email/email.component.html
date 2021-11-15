@@ -5,9 +5,9 @@
 
   <!-- Name -->
   <div class="mb-3 row">
-    <label class="col-sm-3 col-form-label">Name</label>
+    <label class="col-sm-3 col-form-label">{{name}}</label>
     <div class="col-sm-9">
-      <input type="text" class="form-control" placeholder="Write your name" formControlName="name">
+      <input type="text" class="form-control" [placeholder]="namePlaceHolder" formControlName="name">
       <span class="form-text text-danger" error-msg [valid]="hasError('name')">
       </span>
     </div>
@@ -15,9 +15,9 @@
 
   <!-- Email -->
   <div class="mb-3 row">
-    <label class="col-sm-3 col-form-label">Email</label>
+    <label class="col-sm-3 col-form-label">{{email}}</label>
     <div class="col-sm-9">
-      <input type="text" class="form-control" placeholder="Write your email" formControlName="email">
+      <input type="text" class="form-control" [placeholder]="emailPlaceHolder" formControlName="email">
       <span class="form-text text-danger" error-msg [msg]="emailErrorMsg" [valid]="hasError('email')">
       </span>
     </div>
@@ -25,9 +25,9 @@
 
   <!-- Subject -->
   <div class="mb-3 row">
-    <label class="col-sm-3 col-form-label">Subject</label>
+    <label class="col-sm-3 col-form-label">{{subject}}</label>
     <div class="col-sm-9">
-      <input type="text" class="form-control" placeholder="Write the email subject" formControlName="subject">
+      <input type="text" class="form-control" [placeholder]="subjectPlaceHolder" formControlName="subject">
       <span class="form-text text-danger" error-msg [valid]="hasError('subject')">
       </span>
     </div>
@@ -35,15 +35,16 @@
 
   <!-- Message -->
   <div class="mb-3 row">
-    <label class="col-sm-3 col-form-label">Message</label>
+    <label class="col-sm-3 col-form-label">{{message}}</label>
     <div class="col-sm-9">
-      <textarea pInputTextarea class="form-control" placeholder="Write your message" [autoResize]=true
+      <textarea pInputTextarea class="form-control" [placeholder]="messagePlaceHolder" [autoResize]=true
                 formControlName="message"></textarea>
       <span class="form-text text-danger" error-msg [valid]="hasError('message')">
       </span>
     </div>
   </div>
 
-  <button pButton type="submit" class="p-button-raised p-button-rounded float-end mb-5 " label="Send mail" [disabled]="myForm.invalid" >
+  <button pButton type="submit" class="p-button-raised p-button-rounded float-end mb-5 "
+          [label]="textButton" [disabled]="myForm.invalid" >
   </button>
 </form>

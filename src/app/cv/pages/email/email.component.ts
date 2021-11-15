@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import {FormBuilder, FormGroup, Validators} from "@angular/forms";
 import {ValidatorService} from "../../../shared/validators/validator.service";
+import {SessionStorageService} from "../../../services/sessionStorage.service";
+import {Observable} from "rxjs";
+import {MessagesService} from "../../../services/messages.service";
 
 @Component({
   selector: 'app-email',
@@ -17,8 +20,21 @@ export class EmailComponent implements OnInit {
     message: ['', Validators.required]
   })
 
+  //Internationalization
+  sessionStorageObservable: Observable<any> = this.ss.watchStorage();
+  name:string = '';
+  email:string = '';
+  subject:string = '';
+  message:string = '';
+  namePlaceHolder:string = '';
+  emailPlaceHolder:string = '';
+  subjectPlaceHolder:string = '';
+  messagePlaceHolder:string = '';
+  textButton: string = '';
   constructor(private fb: FormBuilder,
-              private vs: ValidatorService) { }
+              private vs: ValidatorService,
+              private ms: MessagesService,
+              private ss: SessionStorageService) { }
 
   get emailErrorMsg(): string {
     const errors = this.myForm.get('email')?.errors;
@@ -32,6 +48,8 @@ export class EmailComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.updateTexts();
+    this.sessionStorageObservable.subscribe(() => this.updateTexts());
   }
 
   sendEmail() {
@@ -42,6 +60,19 @@ export class EmailComponent implements OnInit {
     return (this.myForm.get(field)?.touched
       && this.myForm.get(field)?.invalid)
       || false;
+  }
+
+  updateTexts() {
+
+    this.name = this.ms.getMessage('form_name');
+    this.email = this.ms.getMessage('form_email');
+    this.subject = this.ms.getMessage('form_subject');
+    this.message = this.ms.getMessage('form_message');
+    this.namePlaceHolder = this.ms.getMessage('form_placeholder_name');
+    this.emailPlaceHolder = this.ms.getMessage('form_placeholder_email');
+    this.subjectPlaceHolder = this.ms.getMessage('form_placeholder_subject');
+    this.messagePlaceHolder = this.ms.getMessage('form_placeholder_message');
+    this.textButton = this.ms.getMessage('form_send_mail');
   }
 
 }
