@@ -1,5 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {MenuItem} from "primeng/api";
+import {MessagesService} from "../../../services/messages.service";
+import {Observable} from "rxjs";
+import {SessionStorageService} from "../../../services/sessionStorage.service";
 
 @Component({
   selector: 'app-menu',
@@ -13,38 +16,48 @@ import {MenuItem} from "primeng/api";
 export class MenuComponent implements OnInit {
 
   dockItems: MenuItem[] = [];
+  sessionStorageObservable: Observable<any> = this.ss.watchStorage();
 
-  constructor() { }
+  constructor(private ms:MessagesService, private ss:SessionStorageService) { }
 
   ngOnInit() {
+    this.sessionStorageObservable
+      .subscribe(data => {
+        console.log(data);
+        this.updateDockItems();
+      })
+    this.updateDockItems();
+
+  }
+
+  updateDockItems() {
     this.dockItems = [
       {
-        label: 'Summary',
+        label: this.ms.getMessage('dock_summary'),
         icon: "assets/dock/info-svgrepo-com.svg",
         routerLink: 'cv'
       },
       {
-        label: 'Studies',
+        label: this.ms.getMessage('dock_studies'),
         icon: "assets/dock/student-hat-svgrepo-com.svg",
         routerLink: 'cv/studies'
       },
       {
-        label: 'Professional Experience',
+        label: this.ms.getMessage('dock_prof_exp'),
         icon: "assets/dock/job-search-svgrepo-com.svg",
         routerLink: 'cv/professional-exp'
       },
       {
-        label: 'Skills',
+        label: this.ms.getMessage('dock_skills'),
         icon: "assets/dock/settings-svgrepo-com.svg",
         routerLink: 'cv/skills'
       },
       {
-        label: 'Other info',
+        label: this.ms.getMessage('dock_other'),
         icon: "assets/dock/contact-svgrepo-com.svg",
         routerLink: 'cv/other-info'
       }
     ];
-
   }
 
 }

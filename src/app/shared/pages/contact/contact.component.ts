@@ -18,7 +18,7 @@ export class ContactComponent implements OnInit {
     this.items = [
       {
         icon: 'pi pi-envelope',
-        routerLink: 'cv/send-email',
+        routerLink: '/cv/send-email',
       },
       {
         icon: 'fab fa-linkedin',

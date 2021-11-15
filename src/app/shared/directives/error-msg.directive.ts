@@ -14,8 +14,10 @@ export class ErrorMsgDirective implements OnInit, OnChanges {
     this.setColor();
   }
   @Input() set msg ( value: string ) {
-    this._msg = value;
-    this.setMessage();
+    if(value && value != '') {
+      this._msg = value;
+      this.setMessage();
+    }
   }
   @Input() set valid ( value: boolean ) {
     this.htmlElement.nativeElement.hidden = !value;

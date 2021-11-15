@@ -1,6 +1,6 @@
 <p-dock [model]="dockItems" position="left">
   <ng-template pTemplate="item" let-item>
-    <img [src]="item.icon" [alt]="item.label" width="100%"
-         [pTooltip]="item.label" tooltipStyleClass="ms-5" >
+    <img [src]="item.icon" [alt]="item.label" width="100%" i18n-pTooltip
+         pTooltip="{{item.label}}" tooltipStyleClass="ms-5" >
   </ng-template>
 </p-dock>

@@ -4,6 +4,7 @@ import { ButtonModule } from "primeng/button";
 import { DialogModule } from 'primeng/dialog';
 import { DockModule } from 'primeng/dock';
 import { ImageModule } from 'primeng/image';
+import { InputTextareaModule } from 'primeng/inputtextarea';
 import { TooltipModule } from 'primeng/tooltip';
 import { SpeedDialModule } from 'primeng/speeddial';
 
@@ -15,6 +16,7 @@ import { SpeedDialModule } from 'primeng/speeddial';
     DialogModule,
     DockModule,
     ImageModule,
+    InputTextareaModule,
     TooltipModule,
     SpeedDialModule
   ]

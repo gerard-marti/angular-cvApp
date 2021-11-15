@@ -1,19 +1,49 @@
 <h1> Contact with me!</h1>
 <hr>
 
-<form [formGroup]="myForm" (ngSubmit)="sendEmail()">
+<form [formGroup]="myForm" (ngSubmit)="sendEmail()" class="mb-5">
 
   <!-- Name -->
   <div class="mb-3 row">
     <label class="col-sm-3 col-form-label">Name</label>
     <div class="col-sm-9">
       <input type="text" class="form-control" placeholder="Write your name" formControlName="name">
-      <span class="form-text text-danger" error-msg [valid]="myForm.get('name')?.touched || hasError('name')">
-
+      <span class="form-text text-danger" error-msg [valid]="hasError('name')">
       </span>
     </div>
   </div>
-</form>
 
-<h1> Form </h1>
-<pre>{{myForm.get('name')?.touched }}</pre>
+  <!-- Email -->
+  <div class="mb-3 row">
+    <label class="col-sm-3 col-form-label">Email</label>
+    <div class="col-sm-9">
+      <input type="text" class="form-control" placeholder="Write your email" formControlName="email">
+      <span class="form-text text-danger" error-msg [msg]="emailErrorMsg" [valid]="hasError('email')">
+      </span>
+    </div>
+  </div>
+
+  <!-- Subject -->
+  <div class="mb-3 row">
+    <label class="col-sm-3 col-form-label">Subject</label>
+    <div class="col-sm-9">
+      <input type="text" class="form-control" placeholder="Write the email subject" formControlName="subject">
+      <span class="form-text text-danger" error-msg [valid]="hasError('subject')">
+      </span>
+    </div>
+  </div>
+
+  <!-- Message -->
+  <div class="mb-3 row">
+    <label class="col-sm-3 col-form-label">Message</label>
+    <div class="col-sm-9">
+      <textarea pInputTextarea class="form-control" placeholder="Write your message" [autoResize]=true
+                formControlName="message"></textarea>
+      <span class="form-text text-danger" error-msg [valid]="hasError('message')">
+      </span>
+    </div>
+  </div>
+
+  <button pButton type="submit" class="p-button-raised p-button-rounded float-end mb-5 " label="Send mail" [disabled]="myForm.invalid" >
+  </button>
+</form>
