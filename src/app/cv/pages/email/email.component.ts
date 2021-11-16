@@ -1,15 +1,18 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {FormBuilder, FormGroup, Validators} from "@angular/forms";
 import {ValidatorService} from "../../../shared/validators/validator.service";
 import {SessionStorageService} from "../../../services/sessionStorage.service";
 import {Observable} from "rxjs";
 import {MessagesService} from "../../../services/messages.service";
+import {RestService} from "../../../services/rest.service";
+import {MessageService} from "primeng/api";
 
 @Component({
   selector: 'app-email',
   templateUrl: './email.component.html',
   styles: [
-  ]
+  ],
+  providers: [MessageService]
 })
 export class EmailComponent implements OnInit {
 
@@ -19,6 +22,8 @@ export class EmailComponent implements OnInit {
     email: ['', [Validators.required, Validators.pattern(this.vs.emailPattern)]],
     message: ['', Validators.required]
   })
+
+  loading: boolean = false;
 
   //Internationalization
   sessionStorageObservable: Observable<any> = this.ss.watchStorage();
@@ -34,7 +39,9 @@ export class EmailComponent implements OnInit {
   constructor(private fb: FormBuilder,
               private vs: ValidatorService,
               private ms: MessagesService,
-              private ss: SessionStorageService) { }
+              private ss: SessionStorageService,
+              private messageServicePnG: MessageService,
+              private restService: RestService) { }
 
   get emailErrorMsg(): string {
     const errors = this.myForm.get('email')?.errors;
@@ -53,6 +60,29 @@ export class EmailComponent implements OnInit {
   }
 
   sendEmail() {
+    this.loading = true;
+    const name = this.myForm.get('name')?.value;
+    const sender = this.myForm.get('email')?.value;
+    const subject = this.myForm.get('subject')?.value;
+    const message = this.myForm.get('message')?.value;
+
+    this.myForm.reset();
+
+    let bodyMessage = `Hi ha un nou correu de ${name} amb el següent contingut:\n${message} \n\nEl seu correu es: ${sender}`;
+
+    this.restService.sendEmail(subject, bodyMessage)
+      .subscribe(resp => {
+        this.loading = false
+        if(resp.status === "200") {
+          this.messageServicePnG.add({key: 'emailResponse', severity: 'success',
+            summary: this.ms.transaltions.general.success,
+            detail: this.ms.transaltions.mail.successMsg})
+        } else {
+          this.messageServicePnG.add({key: 'emailResponse', severity: 'error',
+            summary: this.ms.transaltions.general.error,
+            detail: this.ms.transaltions.mail.errorMsg})
+        }
+      });
 
   }
 

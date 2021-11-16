@@ -1,7 +1,23 @@
 
+export interface EmailResponseInterface {
+  response: string;
+  status: string;
+}
+
 export interface Translation {
   dockMenu: DockMenu;
   form: Form;
+  mail: Mail;
+  general: General;
+}
+
+interface General {
+  success: string;
+  error: string;
+}
+interface Mail {
+  successMsg: string;
+  errorMsg: string;
 }
 
 interface DockMenu {

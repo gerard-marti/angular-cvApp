@@ -20,5 +20,13 @@
     "buttons": {
       "send_email"  :   "Enviar correu"
     }
+  },
+  "mail": {
+    "successMsg": "Correu enviat correctament",
+    "errorMsg"  : "Hi ha hagut un error enviant el missatge, intenta-ho més tard"
+  },
+  "general" : {
+    "success" : "Èxit",
+    "error"   : "Error"
   }
 }

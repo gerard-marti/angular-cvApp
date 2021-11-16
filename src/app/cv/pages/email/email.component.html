@@ -1,3 +1,4 @@
+<p-toast position="top-right" key="emailResponse"></p-toast>
 <h1> Contact with me!</h1>
 <hr>
 
@@ -43,8 +44,12 @@
       </span>
     </div>
   </div>
-
+<!--  <p-captcha siteKey="YOUR_SITE_KEY" (onResponse)="showResponse($event)" initCallback="loadCaptcha"></p-captcha>-->
   <button pButton type="submit" class="p-button-raised p-button-rounded float-end mb-5 "
           [label]="textButton" [disabled]="myForm.invalid" >
   </button>
 </form>
+
+<p-dialog [modal]="true" [draggable]="false" [closable]="false" [visible]="loading">
+  <p-progressSpinner></p-progressSpinner>
+</p-dialog>
