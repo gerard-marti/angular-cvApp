@@ -1,0 +1,24 @@
+{
+  "dockMenu": {
+    "summary"   :   "Resum",
+    "studies"   :   "Estudis",
+    "prof_exp"  :   "Experiència professional",
+    "skills"    :   "Habilitats",
+    "other"     :   "Altre informació"
+  },
+  "form": {
+    "name"        :   "Nom",
+    "email"       :   "Correu",
+    "subject"     :   "Assumpte",
+    "message"     :   "Missatge",
+    "placeholders": {
+      "name"        :   "Escriu el teu nom",
+      "email"       :   "Escriu el teu correu",
+      "subject"     :   "Escriu l'assumpte del missatge",
+      "message"     :   "Escriu el missatge"
+    },
+    "buttons": {
+      "send_email"  :   "Enviar correu"
+    }
+  }
+}

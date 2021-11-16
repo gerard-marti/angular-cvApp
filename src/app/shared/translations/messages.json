@@ -1,0 +1,24 @@
+{
+  "dockMenu": {
+    "summary"   :   "Summary",
+    "studies"   :   "Studies",
+    "prof_exp"  :   "Professional Experience",
+    "skills"    :   "Skills",
+    "other"     :   "Other Info"
+  },
+  "form": {
+    "name"        :   "Name",
+    "email"       :   "Email",
+    "subject"     :   "Subject",
+    "message"     :   "Message",
+    "placeholders": {
+      "name"        :   "Write your name",
+      "email"       :   "Write your email",
+      "subject"     :   "Write the email subject",
+      "message"     :   "Write the message"
+    },
+    "buttons": {
+      "send_email"  :   "Send email"
+    }
+  }
+}

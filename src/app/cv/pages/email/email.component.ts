@@ -64,15 +64,15 @@ export class EmailComponent implements OnInit {
 
   updateTexts() {
 
-    this.name = this.ms.getMessage('form_name');
-    this.email = this.ms.getMessage('form_email');
-    this.subject = this.ms.getMessage('form_subject');
-    this.message = this.ms.getMessage('form_message');
-    this.namePlaceHolder = this.ms.getMessage('form_placeholder_name');
-    this.emailPlaceHolder = this.ms.getMessage('form_placeholder_email');
-    this.subjectPlaceHolder = this.ms.getMessage('form_placeholder_subject');
-    this.messagePlaceHolder = this.ms.getMessage('form_placeholder_message');
-    this.textButton = this.ms.getMessage('form_send_mail');
+    this.name = this.ms.transaltions.form.name;
+    this.email = this.ms.transaltions.form.email;
+    this.subject = this.ms.transaltions.form.subject;
+    this.message = this.ms.transaltions.form.message;
+    this.namePlaceHolder = this.ms.transaltions.form.placeholders.name;
+    this.emailPlaceHolder = this.ms.transaltions.form.placeholders.email;
+    this.subjectPlaceHolder = this.ms.transaltions.form.placeholders.subject;
+    this.messagePlaceHolder = this.ms.transaltions.form.placeholders.message;
+    this.textButton = this.ms.transaltions.form.buttons.send_email;
   }
 
 }

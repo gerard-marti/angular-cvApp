@@ -32,27 +32,27 @@ export class MenuComponent implements OnInit {
   updateDockItems() {
     this.dockItems = [
       {
-        label: this.ms.getMessage('dock_summary'),
+        label: this.ms.transaltions.dockMenu.summary,
         icon: "assets/dock/info-svgrepo-com.svg",
         routerLink: 'cv'
       },
       {
-        label: this.ms.getMessage('dock_studies'),
+        label: this.ms.transaltions.dockMenu.studies,
         icon: "assets/dock/student-hat-svgrepo-com.svg",
         routerLink: 'cv/studies'
       },
       {
-        label: this.ms.getMessage('dock_prof_exp'),
+        label: this.ms.transaltions.dockMenu.prof_exp,
         icon: "assets/dock/job-search-svgrepo-com.svg",
         routerLink: 'cv/professional-exp'
       },
       {
-        label: this.ms.getMessage('dock_skills'),
+        label: this.ms.transaltions.dockMenu.skills,
         icon: "assets/dock/settings-svgrepo-com.svg",
         routerLink: 'cv/skills'
       },
       {
-        label: this.ms.getMessage('dock_other'),
+        label: this.ms.transaltions.dockMenu.other,
         icon: "assets/dock/contact-svgrepo-com.svg",
         routerLink: 'cv/other-info'
       }
