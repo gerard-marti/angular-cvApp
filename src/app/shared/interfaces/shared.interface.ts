@@ -1,7 +1,7 @@
 
 export interface EmailResponseInterface {
-  response: string;
-  status: string;
+  ok: boolean;
+  message: string;
 }
 
 export interface Translation {

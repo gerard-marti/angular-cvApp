@@ -62,18 +62,18 @@ export class EmailComponent implements OnInit {
   sendEmail() {
     this.loading = true;
     const name = this.myForm.get('name')?.value;
-    const sender = this.myForm.get('email')?.value;
+    const senderMail = this.myForm.get('email')?.value;
     const subject = this.myForm.get('subject')?.value;
     const message = this.myForm.get('message')?.value;
 
     this.myForm.reset();
 
-    let bodyMessage = `Hi ha un nou correu de ${name} amb el següent contingut:\n${message} \n\nEl seu correu es: ${sender}`;
+    // let bodyMessage = `Hi ha un nou correu de ${name} amb el següent contingut:\n${message} \n\nEl seu correu es: ${sender}`;
 
-    this.restService.sendEmail(subject, bodyMessage)
+    this.restService.sendEmail(subject, name, senderMail, message)
       .subscribe(resp => {
         this.loading = false
-        if(resp.status === "200") {
+        if(resp.ok) {
           this.messageServicePnG.add({key: 'emailResponse', severity: 'success',
             summary: this.ms.transaltions.general.success,
             detail: this.ms.transaltions.mail.successMsg})

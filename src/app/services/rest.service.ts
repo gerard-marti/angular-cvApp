@@ -14,9 +14,9 @@ export class RestService {
 
   constructor(private http:HttpClient ) { }
 
-  sendEmail(subject: string, message: string): Observable<EmailResponseInterface> {
-    const url = `${this._baseUrl}/sendEmail`;
-    const body = { receiver: this._receiver, subject, message };
+  sendEmail(subject: string, name: string, senderMail: string, message: string): Observable<EmailResponseInterface> {
+    const url = `${this._baseUrl}/api/send-email`;
+    const body = { receiver: this._receiver, senderName: name, senderMail, subject, message };
 
     return this.http.post<EmailResponseInterface>(url, body);
   }

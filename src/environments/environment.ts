@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  baseUrl: "http://localhost:8080",
+  baseUrl: "http://localhost:4000",
   mailReceiver: "gerardmarti6@gmail.com"
 };
 
