@@ -44,9 +44,9 @@
       </span>
     </div>
   </div>
-<!--  <p-captcha siteKey="YOUR_SITE_KEY" (onResponse)="showResponse($event)" initCallback="loadCaptcha"></p-captcha>-->
+  <p-captcha siteKey="6Ld-mEkdAAAAAE0oC04-3IuqCxDbeTnK2WS_bDS1" (onResponse)="showResponse()" initCallback="loadCaptcha"></p-captcha>
   <button pButton type="submit" class="p-button-raised p-button-rounded float-end mb-5 "
-          [label]="textButton" [disabled]="myForm.invalid" >
+          [label]="textButton" [disabled]="myForm.invalid || !recaptcha" >
   </button>
 </form>
 

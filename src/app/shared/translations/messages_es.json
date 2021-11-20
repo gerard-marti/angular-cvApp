@@ -27,6 +27,8 @@
   },
   "general" : {
     "success" : "Éxito",
-    "error"   : "Error"
+    "error"   : "Error",
+    "officialStudies": "Estudios oficiales",
+    "unOfficialStudies": "Estudios no oficiales"
   }
 }

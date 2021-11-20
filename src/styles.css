@@ -11,3 +11,14 @@ html, body {
 .avatarImage img {
   border-radius: 50%;
 }
+
+.footer{
+  position: fixed;
+  bottom: 0;
+  width:100%;
+  height: 8%;
+  z-index: 102;
+}
+.sidebarIcon{
+  font-size: 1.7rem !important;
+}

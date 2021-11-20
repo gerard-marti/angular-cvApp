@@ -24,6 +24,7 @@ export class EmailComponent implements OnInit {
   })
 
   loading: boolean = false;
+  recaptcha: boolean = false;
 
   //Internationalization
   sessionStorageObservable: Observable<any> = this.ss.watchStorage();
@@ -93,7 +94,6 @@ export class EmailComponent implements OnInit {
   }
 
   updateTexts() {
-
     this.name = this.ms.transaltions.form.name;
     this.email = this.ms.transaltions.form.email;
     this.subject = this.ms.transaltions.form.subject;
@@ -103,6 +103,11 @@ export class EmailComponent implements OnInit {
     this.subjectPlaceHolder = this.ms.transaltions.form.placeholders.subject;
     this.messagePlaceHolder = this.ms.transaltions.form.placeholders.message;
     this.textButton = this.ms.transaltions.form.buttons.send_email;
+  }
+
+  showResponse() {
+    this.recaptcha = true;
+
   }
 
 }

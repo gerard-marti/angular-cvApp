@@ -1,6 +1,4 @@
-<p-dock [model]="dockItems" position="left">
-  <ng-template pTemplate="item" let-item>
-    <img [src]="item.icon" [alt]="item.label" width="100%" i18n-pTooltip
-         pTooltip="{{item.label}}" tooltipStyleClass="ms-5" >
-  </ng-template>
-</p-dock>
+<div class="d-flex justify-content-start">
+  <button type="button" pButton icon="pi pi-bars" (click)="menu.toggle($event)"></button>
+  <p-menu #menu [popup]="true" [model]="dockItems"></p-menu>
+</div>

@@ -1,20 +1,20 @@
-import {Component, OnInit} from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import {MenuItem} from "primeng/api";
-import {MessagesService} from "../../../services/messages.service";
 import {Observable} from "rxjs";
+import {MessagesService} from "../../../services/messages.service";
 import {SessionStorageService} from "../../../services/sessionStorage.service";
 
 @Component({
   selector: 'app-menu',
   templateUrl: './menu.component.html',
-  styles: [`
-    img {
-      cursor: pointer;
-    }
-  `]
+  styles: [
+    `
+    `
+  ]
 })
 export class MenuComponent implements OnInit {
 
+  display: boolean = false;
   dockItems: MenuItem[] = [];
   sessionStorageObservable: Observable<any> = this.ss.watchStorage();
 
@@ -34,7 +34,7 @@ export class MenuComponent implements OnInit {
       {
         label: this.ms.transaltions.dockMenu.summary,
         icon: "assets/dock/info-svgrepo-com.svg",
-        routerLink: 'cv'
+        routerLink: 'cv/main'
       },
       {
         label: this.ms.transaltions.dockMenu.studies,

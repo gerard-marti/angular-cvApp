@@ -27,6 +27,8 @@
   },
   "general" : {
     "success" : "Success",
-    "error"   : "Error"
+    "error"   : "Error",
+    "officialStudies": "Official studies" ,
+    "unOfficialStudies": "Unofficial studies"
   }
 }

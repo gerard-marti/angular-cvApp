@@ -7,6 +7,7 @@ import {PrimeNgModule} from "../prime-ng/prime-ng.module";
 import { ContactComponent } from './pages/contact/contact.component';
 import {FontAwesomeModule} from "@fortawesome/angular-fontawesome";
 import {ErrorMsgDirective} from "./directives/error-msg.directive";
+import { FooterComponent } from './pages/footer/footer.component';
 
 
 @NgModule({
@@ -14,14 +15,17 @@ import {ErrorMsgDirective} from "./directives/error-msg.directive";
     LanguagesComponent,
     MenuComponent,
     ContactComponent,
-    ErrorMsgDirective
+    ErrorMsgDirective,
+    FooterComponent
   ],
-  exports: [
-    LanguagesComponent,
-    ContactComponent,
-    MenuComponent,
-    ErrorMsgDirective
-  ],
+    exports: [
+        LanguagesComponent,
+        ContactComponent,
+        MenuComponent,
+        ErrorMsgDirective,
+        FooterComponent,
+        MenuComponent
+    ],
   imports: [
     CommonModule,
     PrimeNgModule,

@@ -14,6 +14,8 @@ export interface Translation {
 interface General {
   success: string;
   error: string;
+  officialStudies: string;
+  unOfficialStudies: string;
 }
 interface Mail {
   successMsg: string;
