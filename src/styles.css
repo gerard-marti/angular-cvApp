@@ -27,4 +27,9 @@ html, body {
   .contact-dial{
     right: -20px;
   }
+
+
+  .dialogClass > div > div{
+    width: 90vw !important;
+  }
 }

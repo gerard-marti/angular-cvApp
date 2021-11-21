@@ -17,7 +17,6 @@ export class MessagesService {
   selectedLanguage: string = sessionStorage.getItem('selectedLanguage')!;
 
   constructor() {
-    console.log(this._messagesEng.dockMenu.summary)
   }
 
   get messagesEng() {

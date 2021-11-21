@@ -23,7 +23,8 @@
   },
   "mail": {
     "successMsg": "Correo enviado correctamente",
-    "errorMsg"  : "Se ha producido un error enviando el mensaje, intentalo más tarde"
+    "errorMsg"  : "Se ha producido un error enviando el mensaje, intentalo más tarde",
+    "contactMe" : "¡Contacta conmigo!"
   },
   "general" : {
     "success" : "Éxito",

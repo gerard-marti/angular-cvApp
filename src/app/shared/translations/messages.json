@@ -23,7 +23,8 @@
   },
   "mail": {
     "successMsg": "Mail sent correctly",
-    "errorMsg"  : "There is an error sending the email, try later"
+    "errorMsg"  : "There is an error sending the email, try later",
+    "contactMe" : "Contact with me!"
   },
   "general" : {
     "success"       : "Success",

@@ -1,1 +1,21 @@
-<p>profesional-exp works!</p>
+<div class="card border-0 mt-3">
+  <p-timeline [value]="experience" align="alternate" styleClass="customized-timeline  mt-5 mb-5 ">
+    <ng-template pTemplate="marker" let-event>
+            <span class="custom-marker p-shadow-2" [style.backgroundColor]="event.color">
+                <i [ngClass]="event.icon"></i>
+            </span>
+    </ng-template>
+    <ng-template pTemplate="content" let-study>
+      <p-card [header]="study.status" subheader="{{study.date}} - {{study.center}}">
+        <img *ngIf="study.image" [src]="study.image" [alt]="study.name" width="200" class="p-shadow-2 ms-2 me-2" />
+        <br>
+        <button pButton [label]="readMoreText" (click)="displayDialog = true" class="p-button-text mt-3"></button>
+      </p-card>
+    </ng-template>
+  </p-timeline>
+</div>
+
+<p-dialog [header]="dialogHeader" [(visible)]="displayDialog" [modal]="true" [style]="{width: '50vw'}"
+          [draggable]="false" [resizable]="false" class="dialogClass">
+  <p [innerHTML]="dialogContent"></p>
+</p-dialog>

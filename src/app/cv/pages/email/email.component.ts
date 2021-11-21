@@ -37,7 +37,7 @@ export class EmailComponent implements OnInit {
   subjectPlaceHolder:string = '';
   messagePlaceHolder:string = '';
   textButton: string = '';
-  mailFormat: string = '';
+  contactMe: string = '';
   constructor(private fb: FormBuilder,
               private vs: ValidatorService,
               private ms: MessagesService,
@@ -104,6 +104,7 @@ export class EmailComponent implements OnInit {
     this.subjectPlaceHolder = this.ms.transaltions.form.placeholders.subject;
     this.messagePlaceHolder = this.ms.transaltions.form.placeholders.message;
     this.textButton = this.ms.transaltions.form.buttons.send_email;
+    this.contactMe = this.ms.transaltions.mail.contactMe;
   }
 
   showResponse() {

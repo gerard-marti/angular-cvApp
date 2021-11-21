@@ -23,7 +23,8 @@
   },
   "mail": {
     "successMsg": "Correu enviat correctament",
-    "errorMsg"  : "Hi ha hagut un error enviant el missatge, intenta-ho més tard"
+    "errorMsg"  : "Hi ha hagut un error enviant el missatge, intenta-ho més tard",
+    "contactMe" : "Contacta amb mi!"
   },
   "general" : {
     "success" : "Èxit",

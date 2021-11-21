@@ -24,6 +24,7 @@ interface General {
 interface Mail {
   successMsg: string;
   errorMsg: string;
+  contactMe: string;
 }
 
 interface DockMenu {
