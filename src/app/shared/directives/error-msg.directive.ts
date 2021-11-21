@@ -1,4 +1,7 @@
 import {Directive, ElementRef, Input, OnChanges, OnInit, SimpleChanges} from '@angular/core';
+import {MessagesService} from "../../services/messages.service";
+import {SessionStorageService} from "../../services/sessionStorage.service";
+import {Observable} from "rxjs";
 
 @Directive({
   selector: '[error-msg]'
@@ -6,7 +9,9 @@ import {Directive, ElementRef, Input, OnChanges, OnInit, SimpleChanges} from '@a
 export class ErrorMsgDirective implements OnInit, OnChanges {
 
   private _color: string = 'red';
-  private _msg: string = 'This field is required';
+  sessionStorageObservable: Observable<any> = this.ss.watchStorage();
+  private _msg: string = this.ms.transaltions.general.requiredField;
+  requiredField: string = this.ms.transaltions.general.requiredField;
 
   htmlElement: ElementRef<HTMLElement>;
   @Input() set color( value: string ) {
@@ -23,7 +28,9 @@ export class ErrorMsgDirective implements OnInit, OnChanges {
     this.htmlElement.nativeElement.hidden = !value;
   }
 
-  constructor(private el: ElementRef<HTMLElement>) {
+  constructor(private el: ElementRef<HTMLElement>,
+              private ms: MessagesService,
+              private ss: SessionStorageService) {
     this.htmlElement = el;
   }
 
@@ -37,6 +44,7 @@ export class ErrorMsgDirective implements OnInit, OnChanges {
   }
 
   ngOnInit(): void {
+    this.sessionStorageObservable.subscribe(() => this.updateTexts());
     this.setClasses();
     this.setColor();
     this.setMessage();
@@ -52,6 +60,12 @@ export class ErrorMsgDirective implements OnInit, OnChanges {
 
   setMessage(): void {
     this.htmlElement.nativeElement.innerText = this._msg;
+  }
+
+  updateTexts() {
+    if(this._msg.includes('field') || this._msg.includes('camp')) {
+      this._msg = this.ms.transaltions.general.requiredField;
+    }
   }
 
 }

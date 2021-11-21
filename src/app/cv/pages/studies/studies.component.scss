@@ -42,3 +42,32 @@
     }
   }
 }
+
+@media screen and (max-width: 430px) {
+  ::ng-deep {
+
+    .customized-timeline {
+
+      .p-timeline-event:nth-child(even) {
+        flex-direction: row !important;
+
+        .p-timeline-event-content {
+          text-align: left !important;
+        }
+      }
+
+
+      .p-timeline-event-opposite {
+        display: none;
+      }
+      .p-timeline-event-separator {
+        display: none;
+      }
+
+      .p-card {
+        margin-top: 1rem;
+      }
+
+    }
+  }
+}

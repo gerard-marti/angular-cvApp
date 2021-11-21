@@ -26,9 +26,25 @@
     "errorMsg"  : "There is an error sending the email, try later"
   },
   "general" : {
-    "success" : "Success",
-    "error"   : "Error",
-    "officialStudies": "Official studies" ,
-    "unOfficialStudies": "Unofficial studies"
+    "success"       : "Success",
+    "error"         : "Error",
+    "readMore"      : "Read More",
+    "requiredField" : "This field is required",
+    "requiredMail"  : "Email is mandatory",
+    "mailFormat"    : "Email has an incorrect format"
+  },
+  "studies" : {
+    "officialStudies"       : "Official studies" ,
+    "unOfficialStudies"     : "Unofficial studies",
+    "masterTitle"           : "Cybersecurity and privacy master",
+    "degreeTitle"           : "Degree in Computer Engineering",
+    "bachelorTitle"         : "Technological Bachelor",
+    "unOfficialStudyTitle1" : "Angular from zero to expert"
+  },
+  "summary" : {
+    "mainText1" : "Hi! My name is Gerard Martí, I'm from 1995 and if you're here is cause you're interested in my profile, go on!",
+    "mainText2" : "This page has been developed 100% by myself, done with Angular and Node.js and you can see my academic and professional profile, as well as contact me with the speed dial in the bottom right part. Also, if you want, you can change the language displayed in the page, with the top right flag buttons.",
+    "mainText3" : "To make a summary, I started my degree in \"Universitat Rovira i Virgili\" of Tarragona, I went to Prague 6 months with an Erasmus program and after that, I studied a master in cybersecurity. In the professional field, I've worked in Java mainly, but, as you can see with this page, I've also like working in other languages as Angular.",
+    "mainText4" : "I hope you like my online CV! You can also see my other projects in my Github, in the bottom right speed dial."
   }
 }

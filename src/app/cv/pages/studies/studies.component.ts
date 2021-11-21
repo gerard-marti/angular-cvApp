@@ -2,43 +2,60 @@ import { Component, OnInit } from '@angular/core';
 import {MessagesService} from "../../../services/messages.service";
 import {Observable} from "rxjs";
 import {SessionStorageService} from "../../../services/sessionStorage.service";
-import {PrimeIcons} from "primeng/api";
 
 @Component({
   selector: 'app-studies',
   templateUrl: './studies.component.html',
   styleUrls: ['studies.component.scss']
-  // styles: [
-  // ]
 })
 export class StudiesComponent implements OnInit {
 
-  events1: any[] = [];
+  officialStudies: any[] = [];
+  unOfficialStudies: any[] = [];
 
   //Internationalization
   sessionStorageObservable: Observable<any> = this.ss.watchStorage();
-  tab1Title: string = this.ms.transaltions.general.officialStudies;
-  tab2Title: string = this.ms.transaltions.general.unOfficialStudies;
+  tab1Title: string = this.ms.transaltions.studies.officialStudies;
+  tab2Title: string = this.ms.transaltions.studies.unOfficialStudies;
+  readMoreText: string = this.ms.transaltions.general.readMore;
+  masterTitle: string = this.ms.transaltions.studies.masterTitle;
+  degreeTitle: string = this.ms.transaltions.studies.degreeTitle;
 
   constructor(private ms: MessagesService,
               private ss: SessionStorageService) { }
 
   ngOnInit(): void {
-    this.events1 = [
-      {status: 'Ordered', date: '15/10/2020 10:30', icon: PrimeIcons.SHOPPING_CART, color: '#9C27B0', image: 'game-controller.jpg'},
-      {status: 'Processing', date: '15/10/2020 14:00', icon: PrimeIcons.COG, color: '#673AB7'},
-      {status: 'Shipped', date: '15/10/2020 16:15', icon: PrimeIcons.ENVELOPE, color: '#FF9800'},
-      {status: 'Delivered', date: '16/10/2020 10:00', icon: PrimeIcons.CHECK, color: '#607D8B'}
-    ];
     this.updateTexts();
     this.sessionStorageObservable.subscribe(() => this.updateTexts());
   }
 
 
   updateTexts() {
-    this.tab1Title = this.ms.transaltions.general.officialStudies;
-    this.tab2Title = this.ms.transaltions.general.unOfficialStudies;
+    this.tab1Title = this.ms.transaltions.studies.officialStudies;
+    this.tab2Title = this.ms.transaltions.studies.unOfficialStudies;
+    this.readMoreText = this.ms.transaltions.general.readMore;
+    this.masterTitle = this.ms.transaltions.studies.masterTitle;
+    this.degreeTitle = this.ms.transaltions.studies.degreeTitle;
 
+    this.officialStudies = [
+      {status: this.ms.transaltions.studies.masterTitle, date: '2019 - 2021', center:'Universitat Oberta de Catalunya',
+        icon: 'fas fa-user-lock', color: '#1b98a6', image: 'assets/studies/uoc.jpg', readMore: 'https://estudios.uoc.edu/es/masters-universitarios/ciberseguridad-privacidad/presentacion'},
+      {status: this.ms.transaltions.studies.degreeTitle, date: '2013 - 2018', center: 'Universitat Rovira i Virgili',
+        icon: 'fas fa-laptop-code', color: '#673AB7', image: 'assets/studies/urv-bandera-color.png'},
+      {status: this.ms.transaltions.studies.degreeTitle, date: '2017 - 2018', center: 'FIT ČVUT v Praze',
+        icon: 'fas fa-laptop-code', color: '#0202a8', image: 'assets/studies/CVUT_logo.jpg'},
+      {status: this.ms.transaltions.studies.bachelorTitle, date: '2011 - 2013', center: 'Fundació Escola Teresiana',
+        icon: 'fas fa-chalkboard-teacher', color: '#07a802', image: 'assets/studies/logo-fet-home.png'}
+    ]
+    this.unOfficialStudies = [
+      {status: this.ms.transaltions.studies.unOfficialStudyTitle1, date: '11/2021', center:'Udemy',
+        icon: 'fab fa-angular', color: '#ed0707', image: 'assets/studies/Udemy_logo.svg', readMore: 'https://www.udemy.com/certificate/UC-be20a6c7-123d-461f-b667-7fa060601a99/'}
+    ]
+
+  }
+
+  goToLink(url: string) {
+    window.open(url, "_blank");
   }
 
   }

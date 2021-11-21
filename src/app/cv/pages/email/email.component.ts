@@ -37,6 +37,7 @@ export class EmailComponent implements OnInit {
   subjectPlaceHolder:string = '';
   messagePlaceHolder:string = '';
   textButton: string = '';
+  mailFormat: string = '';
   constructor(private fb: FormBuilder,
               private vs: ValidatorService,
               private ms: MessagesService,
@@ -48,9 +49,9 @@ export class EmailComponent implements OnInit {
     const errors = this.myForm.get('email')?.errors;
 
     if(errors?.required) {
-      return 'Email is mandatory';
+      return this.ms.transaltions.general.requiredMail;
     } else if(errors?.pattern) {
-      return 'Email has an incorrect format';
+      return this.ms.transaltions.general.mailFormat;
     }
     return '';
   }

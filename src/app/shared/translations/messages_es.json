@@ -28,7 +28,23 @@
   "general" : {
     "success" : "Éxito",
     "error"   : "Error",
-    "officialStudies": "Estudios oficiales",
-    "unOfficialStudies": "Estudios no oficiales"
+    "readMore": "Leer más",
+    "requiredField": "Este campo es obligatorio",
+    "requiredMail"  : "El correo es obligatorio",
+    "mailFormat"    : "El correo tiene un formato incorrecto"
+  },
+  "studies" : {
+    "officialStudies"       : "Estudios oficiales" ,
+    "unOfficialStudies"     : "Estudios no oficiales",
+    "masterTitle"           : "Máster en Ciberseguridad y Privacidad",
+    "degreeTitle"           : "Grado en Ingeniería Informática",
+    "bachelorTitle"         : "Bachiller Tecnológico",
+    "unOfficialStudyTitle1" : "Angular de cero a experto"
+  },
+  "summary" : {
+    "mainText1" : "¡Hola! Mi nombre es Gerard Martí, soy del 1995 y si estás aquí es porque te interesa mi perfil, ¡adelante!",
+    "mainText2" : "Esta página ha estado 100% desarrollada por mi, hecha en Angular y Node.js y en ella podrás ver mi perfil académico y profesional, así como ponerte en contacto conmigo a través del botón inferior derecho. Si te interesa, también puedes cambiar el idioma de visualización con las banderas que tienes en la parte superior derecha.",
+    "mainText3" : "Para hacer un resumen, hice la carrera en la \"Universitat Rovira i Virgili\" de Tarragona, fuí a Praga 6 meses de Erasmus y luego hice un master en ciberseguridad. En el ámbito laboral, principalmente he trabajado en Java, pero he tocado otros lenguajes como Angular (com en esta página).",
+    "mainText4" : "¡Espero que mi CV online te resulte interesante! Puedes ver mis otros proyectos en mi Github, con el botón inferior derecho."
   }
 }

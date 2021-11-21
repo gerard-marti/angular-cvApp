@@ -1,25 +1,42 @@
 <p-tabView>
   <p-tabPanel [header]="tab1Title">
-    <div class="card">
-      <h5>Customized</h5>
-      <p-timeline [value]="events1" align="alternate" styleClass="customized-timeline">
+    <div class="card mt-5 mb-5 border-0">
+      <p-timeline [value]="officialStudies" align="alternate" styleClass="customized-timeline">
         <ng-template pTemplate="marker" let-event>
             <span class="custom-marker p-shadow-2" [style.backgroundColor]="event.color">
                 <i [ngClass]="event.icon"></i>
             </span>
         </ng-template>
-        <ng-template pTemplate="content" let-event>
-          <p-card [header]="event.status" [subheader]="event.date">
-            <img *ngIf="event.image" [src]="'assets/showcase/images/demo/product/' + event.image" [alt]="event.name" width="200" class="p-shadow-2" />
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed consequuntur error repudiandae numquam deserunt
-              quisquam repellat libero asperiores earum nam nobis, culpa ratione quam perferendis esse, cupiditate neque quas!</p>
-            <button pButton label="Read more" class="p-button-text"></button>
+        <ng-template pTemplate="content" let-study>
+          <p-card [header]="study.status" subheader="{{study.date}} - {{study.center}}">
+            <img *ngIf="study.image" [src]="study.image" [alt]="study.name" width="200" class="p-shadow-2 ms-2 me-2" />
+<!--            <p class="mt-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed consequuntur error repudiandae numquam deserunt-->
+<!--              quisquam repellat libero asperiores earum nam nobis, culpa ratione quam perferendis esse, cupiditate neque quas!</p>-->
+            <br>
+            <button *ngIf="study.readMore" pButton [label]="readMoreText" class="p-button-text mt-3"
+                    (click)="goToLink(study.readMore)"></button>
           </p-card>
         </ng-template>
       </p-timeline>
     </div>
   </p-tabPanel>
   <p-tabPanel [header]="tab2Title">
-
+    <div class="card mt-5 mb-5 border-0">
+      <p-timeline [value]="unOfficialStudies" align="alternate" styleClass="customized-timeline">
+        <ng-template pTemplate="marker" let-event>
+            <span class="custom-marker p-shadow-2" [style.backgroundColor]="event.color">
+                <i [ngClass]="event.icon"></i>
+            </span>
+        </ng-template>
+        <ng-template pTemplate="content" let-study>
+          <p-card [header]="study.status" subheader="{{study.date}} - {{study.center}}">
+            <img *ngIf="study.image" [src]="study.image" [alt]="study.name" width="200" class="p-shadow-2 ms-2 me-2" />
+            <br>
+            <button *ngIf="study.readMore" pButton [label]="readMoreText" class="p-button-text mt-3"
+                    (click)="goToLink(study.readMore)"></button>
+          </p-card>
+        </ng-template>
+      </p-timeline>
+    </div>
   </p-tabPanel>
 </p-tabView>

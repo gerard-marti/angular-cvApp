@@ -22,3 +22,9 @@ html, body {
 .sidebarIcon{
   font-size: 1.7rem !important;
 }
+
+@media screen and (max-width: 430px){
+  .contact-dial{
+    right: -20px;
+  }
+}

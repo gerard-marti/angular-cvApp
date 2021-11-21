@@ -4,13 +4,12 @@ import {MenuItem} from "primeng/api";
 @Component({
   selector: 'app-footer',
   templateUrl: './footer.component.html',
-  styles: [
-  ]
+  styles: [`
+  `]
 })
 export class FooterComponent implements OnInit {
 
   items: MenuItem[] = [];
-  display: boolean = false;
 
   constructor() { }
 
