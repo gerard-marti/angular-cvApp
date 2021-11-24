@@ -1,11 +1,11 @@
 <div class="card mt-5">
   <p-table [value]="skills" styleClass="p-datatable-striped" responsiveLayout="scroll"
-           (sortFunction)="customSort($event)" [customSort]="true">
+           (sortFunction)="customSort($event)" [customSort]="true" [scrollable]="true" scrollDirection="horizontal">
     <ng-template pTemplate="header">
       <tr>
         <th class="text-center" pSortableColumn="name">{{nameString}}<p-sortIcon field="name"></p-sortIcon></th>
-        <th class="text-center" pSortableColumn="yearsExp">{{yearsExpString}}<p-sortIcon field="yearsExp"></p-sortIcon></th>
-        <th class="text-center skillRating" pSortableColumn="rating">{{skillString}}<p-sortIcon field="rating"></p-sortIcon></th>
+        <th class="text-center" style="min-width: 160px;" pSortableColumn="yearsExp">{{yearsExpString}}<p-sortIcon field="yearsExp"></p-sortIcon></th>
+        <th class="text-center" pSortableColumn="rating" style="min-width: 157px;">{{skillString}}<p-sortIcon field="rating"></p-sortIcon></th>
       </tr>
     </ng-template>
     <ng-template pTemplate="body" let-skill>
@@ -14,8 +14,8 @@
           <img [alt]="skill.name" [src]="skill.img" width="32" style="vertical-align: middle" />
           <span class="image-text ms-2">{{skill.name}}</span>
         </td>
-        <td class="text-center">{{skill.yearsExp}}</td>
-        <td class="text-center skillRating"><p-rating [ngModel]="skill.rating" class="cursorDefault" [readonly]="true" [cancel]="false"></p-rating> </td>
+        <td class="text-center" style="min-width: 160px;">{{skill.yearsExp}}</td>
+        <td class="text-center" style="min-width: 157px;"><p-rating [ngModel]="skill.rating" class="cursorDefault" [readonly]="true" [cancel]="false"></p-rating> </td>
       </tr>
     </ng-template>
   </p-table>

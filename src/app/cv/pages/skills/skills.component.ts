@@ -13,13 +13,6 @@ import {SortEvent} from "primeng/api";
       cursor: default!important;
     }
 
-
-    @media screen and (max-width: 460px){
-      .skillRating {
-        display: none;
-      }
-    }
-
   `]
 })
 export class SkillsComponent implements OnInit {
