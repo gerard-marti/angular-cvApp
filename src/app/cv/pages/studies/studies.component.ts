@@ -18,6 +18,7 @@ export class StudiesComponent implements OnInit {
   tab1Title: string = this.ms.transaltions.studies.officialStudies;
   tab2Title: string = this.ms.transaltions.studies.unOfficialStudies;
   readMoreText: string = this.ms.transaltions.general.readMore;
+  seeCertificateText: string = this.ms.transaltions.general.seeCertificate;
   masterTitle: string = this.ms.transaltions.studies.masterTitle;
   degreeTitle: string = this.ms.transaltions.studies.degreeTitle;
 
@@ -34,6 +35,7 @@ export class StudiesComponent implements OnInit {
     this.tab1Title = this.ms.transaltions.studies.officialStudies;
     this.tab2Title = this.ms.transaltions.studies.unOfficialStudies;
     this.readMoreText = this.ms.transaltions.general.readMore;
+    this.seeCertificateText = this.ms.transaltions.general.seeCertificate;
     this.masterTitle = this.ms.transaltions.studies.masterTitle;
     this.degreeTitle = this.ms.transaltions.studies.degreeTitle;
 

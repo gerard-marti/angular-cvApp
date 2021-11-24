@@ -30,9 +30,11 @@
     "success" : "Éxito",
     "error"   : "Error",
     "readMore": "Leer más",
+    "seeCertificate": "Ver Certificado",
     "requiredField": "Este campo es obligatorio",
     "requiredMail"  : "El correo es obligatorio",
-    "mailFormat"    : "El correo tiene un formato incorrecto"
+    "mailFormat"    : "El correo tiene un formato incorrecto",
+    "and"           : "y"
   },
   "studies" : {
     "officialStudies"       : "Estudios oficiales" ,
@@ -47,5 +49,17 @@
     "mainText2" : "Esta página ha estado 100% desarrollada por mi, hecha en Angular y Node.js y en ella podrás ver mi perfil académico y profesional, así como ponerte en contacto conmigo a través del botón inferior derecho. Si te interesa, también puedes cambiar el idioma de visualización con las banderas que tienes en la parte superior derecha.",
     "mainText3" : "Para hacer un resumen, hice la carrera en la \"Universitat Rovira i Virgili\" de Tarragona, fuí a Praga 6 meses de Erasmus y luego hice un master en ciberseguridad. En el ámbito laboral, principalmente he trabajado en Java, pero he tocado otros lenguajes como Angular (com en esta página).",
     "mainText4" : "¡Espero que mi CV online te resulte interesante! Puedes ver mis otros proyectos en mi Github, con el botón inferior derecho."
+  },
+  "professionalExp": {
+    "dialogContentIdiada": "<b>Software Developer (Jul 2018 - Nov 2020)</b><br>Desarrollo de aplicaciones web basadas en Java, usando metodologías ágiles como Scrum.<br> También se ha desarrollado en React<br><br>Uso de diferentes tecnologías como:<ul> <li> Springboot, struts</li><li> Primefaces</li><li> Git</li><li> Maven</li><li> Hibernate, Microsoft SQL</li><li> Entre otros</li></ul><br><b>Automotive Cybersecurity Engineer (Nov 2020 - Jun 2021)</b><br><ul><li>Experto en ciberseguridad de Automoción en ISO/SAE 21434.</li> <li>Gap Analysis, Threat Analysis Risk Assessment (TARA) y Cybersecurity Management System (CSMS). </li><li>Software Updates Management System (SUMS). </li><li>UN R.155 and UN R.156.</li>",
+    "dialogContentVW"     : "<b>Senior Software Developer (Jun 2021 - Dic 2021)</b><br>Desarrollo de aplicaciones web basadas en Java, usando metodologías ágiles como Scrum.<br><br>Uso de diferentes tecnologías como:<ul> <li>JSF</li><li>Git</li><li>Maven</li><li>Hibernate</li><li>Oracle & PLSQL</li><li>Liberty</li><li>Entre otros</li> </ul><br>"
+  },
+  "skills": {
+    "yearString"  : "año",
+    "yearsString" : "años",
+    "monthString" : "mes",
+    "monthsString": "meses",
+    "yearsOfExp"  : "Años de experiencia",
+    "skill"       : "Habilidad"
   }
 }

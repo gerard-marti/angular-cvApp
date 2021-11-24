@@ -9,7 +9,7 @@ import { SkillsComponent } from './pages/skills/skills.component';
 import { OtherInfoComponent } from './pages/other-info/other-info.component';
 import {PrimeNgModule} from "../prime-ng/prime-ng.module";
 import { EmailComponent } from './pages/email/email.component';
-import {ReactiveFormsModule} from "@angular/forms";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {SharedModule} from "../shared/shared.module";
 
 
@@ -27,7 +27,8 @@ import {SharedModule} from "../shared/shared.module";
     CvRoutingModule,
     ReactiveFormsModule,
     PrimeNgModule,
-    SharedModule
+    SharedModule,
+    FormsModule
   ]
 })
 export class CvModule { }

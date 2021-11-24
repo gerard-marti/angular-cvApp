@@ -4,6 +4,13 @@ export interface EmailResponseInterface {
   message: string;
 }
 
+export interface Skill {
+  name: string;
+  img: string;
+  rating: number;
+  yearsExp: string;
+}
+
 export interface Translation {
   dockMenu: DockMenu;
   form: Form;
@@ -11,15 +18,19 @@ export interface Translation {
   general: General;
   studies: Studies;
   summary: Summary;
+  professionalExp: ProfessionalExp;
+  skills: Skills;
 }
 
 interface General {
   success: string;
   error: string;
   readMore: string;
+  seeCertificate: string;
   requiredField: string;
   requiredMail: string;
   mailFormat: string;
+  and: string;
 }
 interface Mail {
   successMsg: string;
@@ -69,4 +80,18 @@ interface Summary {
   mainText2: string;
   mainText3: string;
   mainText4: string;
+}
+
+interface ProfessionalExp {
+  dialogContentIdiada: string;
+  dialogContentVW: string;
+}
+
+interface Skills {
+  yearString: string;
+  yearsString: string;
+  monthString: string;
+  monthsString: string;
+  yearsOfExp: string;
+  skill: string;
 }

@@ -5,11 +5,11 @@
                 <i [ngClass]="event.icon"></i>
             </span>
     </ng-template>
-    <ng-template pTemplate="content" let-study>
-      <p-card [header]="study.status" subheader="{{study.date}} - {{study.center}}">
-        <img *ngIf="study.image" [src]="study.image" [alt]="study.name" width="200" class="p-shadow-2 ms-2 me-2" />
+    <ng-template pTemplate="content" let-experience>
+      <p-card [header]="experience.status" subheader="{{experience.date}} - {{experience.center}}">
+        <img *ngIf="experience.image" [src]="experience.image" [alt]="experience.name" width="200" class="p-shadow-2 ms-2 me-2" />
         <br>
-        <button pButton [label]="readMoreText" (click)="displayDialog = true" class="p-button-text mt-3"></button>
+        <button *ngIf="experience.dialogContent" pButton [label]="readMoreText" (click)="setVariables(experience);" class="p-button-text mt-3"></button>
       </p-card>
     </ng-template>
   </p-timeline>

@@ -8,6 +8,14 @@ html, body {
   color: var(--text-color);
 }
 
+.marginTopInnerDiv > div{
+  margin-top: 1rem;
+}
+
+.cursorDefault > div > span {
+  cursor: default;
+}
+
 .avatarImage img {
   border-radius: 50%;
 }

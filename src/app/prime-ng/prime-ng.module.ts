@@ -9,6 +9,8 @@ import { ImageModule } from 'primeng/image';
 import { InputTextareaModule } from 'primeng/inputtextarea';
 import { MenuModule } from 'primeng/menu';
 import { ProgressSpinnerModule } from 'primeng/progressspinner';
+import { RatingModule } from "primeng/rating";
+import { TableModule } from 'primeng/table';
 import { TabViewModule } from 'primeng/tabview';
 import { TimelineModule } from 'primeng/timeline';
 import { ToastModule } from 'primeng/toast';
@@ -29,6 +31,8 @@ import { SpeedDialModule } from 'primeng/speeddial';
     InputTextareaModule,
     MenuModule,
     ProgressSpinnerModule,
+    RatingModule,
+    TableModule,
     TabViewModule,
     TimelineModule,
     ToastModule,
