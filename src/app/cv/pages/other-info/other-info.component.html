@@ -1,1 +1,46 @@
-<p>other-info works!</p>
+<p-carousel [value]="languages" [numVisible]="3" [circular]="true" [numScroll]="1" [autoplayInterval]="3000"
+            [responsiveOptions]="responsiveOptions" class="mt-2">
+  <ng-template pTemplate="header">
+    <h5 class="mt-5 mb-4">{{languagesText | titlecase}}</h5>
+  </ng-template>
+  <ng-template let-language pTemplate="item">
+    <div class="product-item">
+      <div class="product-item-content">
+        <div class="p-mb-3 mt-5">
+          <img src="{{language.imgUrl}}" [alt]="language.title" class="product-image" />
+        </div>
+        <div>
+          <h4 class="p-mb-1 mt-3">{{language.title}}</h4>
+          <h6 class="p-mt-0 p-mb-3">{{language.subTitle}}</h6>
+        </div>
+        <br>
+        <button *ngIf="language.url" pButton [label]="seeCertificateText" class="p-button-text pt-0"
+                (click)="openImgDialog(language.url)"></button>
+      </div>
+    </div>
+  </ng-template>
+</p-carousel>
+<p-carousel [value]="mobility" [numVisible]="3" [circular]="true" [numScroll]="1" [autoplayInterval]="3000"
+            [responsiveOptions]="responsiveOptions" class="mt-2">
+  <ng-template pTemplate="header">
+    <h5 class="mt-2 mb-4">{{mobilityAvailText | titlecase}}</h5>
+  </ng-template>
+  <ng-template let-mobilityItem pTemplate="item">
+    <div class="product-item">
+      <div class="product-item-content">
+        <div class="p-mb-3">
+          <img src="{{mobilityItem.imgUrl}}" [alt]="mobilityItem.title" class="product-image" />
+        </div>
+        <div>
+          <h4 class="p-mb-1 mt-3">{{mobilityItem.title}}</h4>
+          <h6 class="p-mt-0 p-mb-3">{{mobilityItem.subTitle}}</h6>
+        </div>
+      </div>
+    </div>
+  </ng-template>
+</p-carousel>
+
+<p-dialog [(visible)]="display" [modal]="true">
+  <p-image [src]="dialogImageUrl"
+           alt="Certificate" width="250" [preview]="true"></p-image>
+</p-dialog>

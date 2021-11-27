@@ -4,7 +4,7 @@
     "studies"   :   "Estudis",
     "prof_exp"  :   "Experiència professional",
     "skills"    :   "Habilitats",
-    "other"     :   "Altre informació"
+    "other"     :   "Informació d'interès"
   },
   "form": {
     "name"        :   "Nom",
@@ -34,7 +34,8 @@
     "requiredField" : "Aquest camp és obligatori",
     "requiredMail"  : "El correu és obligatori",
     "mailFormat"    : "El correu té un format incorrecte",
-    "and"           : "i"
+    "and"           : "i",
+    "languages"     : "idiomes"
   },
   "studies" : {
     "officialStudies"       : "Estudis oficials" ,
@@ -61,5 +62,18 @@
     "monthsString": "mesos",
     "yearsOfExp"  : "Anys d'experiència",
     "skill"       : "Habilitat"
+  },
+  "otherInfo": {
+    "nativeLevel"       : "Natiu",
+    "professionalLevel" : "B2 - Professional",
+    "catalan"           : "Català",
+    "spanish"           : "Castellà",
+    "english"           : "Anglès",
+    "mobility"          : "Mobilitat",
+    "licenses"          : "Permisos",
+    "vehicle"           : "Vehicle",
+    "motorcycle"        : "Moto",
+    "car"               : "Cotxe",
+    "mobilityAvail"     : "Disponibilitat de mobilitat"
   }
 }

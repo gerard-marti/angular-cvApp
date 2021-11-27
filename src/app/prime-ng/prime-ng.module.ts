@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { AvatarModule } from "primeng/avatar";
 import { ButtonModule } from "primeng/button";
 import { CardModule } from "primeng/card";
+import { CarouselModule } from 'primeng/carousel';
 import { CaptchaModule } from 'primeng/captcha';
 import { DialogModule } from 'primeng/dialog';
 import { DockModule } from 'primeng/dock';
@@ -25,6 +26,7 @@ import { SpeedDialModule } from 'primeng/speeddial';
     ButtonModule,
     CaptchaModule,
     CardModule,
+    CarouselModule,
     DialogModule,
     DockModule,
     ImageModule,

@@ -31,6 +31,14 @@ html, body {
   font-size: 1.7rem !important;
 }
 
+.p-carousel-items-content{
+  background-color: white;
+}
+
+.product-item.ng-star-inserted {
+  height: 96%
+}
+
 @media screen and (max-width: 430px){
   .contact-dial{
     right: -20px;

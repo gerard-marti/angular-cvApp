@@ -1,4 +1,3 @@
-
 export interface EmailResponseInterface {
   ok: boolean;
   message: string;
@@ -11,6 +10,13 @@ export interface Skill {
   yearsExp: string;
 }
 
+export interface CarouselItem {
+  title: string;
+  subTitle: string;
+  imgUrl: string;
+  url?: string;
+}
+
 export interface Translation {
   dockMenu: DockMenu;
   form: Form;
@@ -20,6 +26,7 @@ export interface Translation {
   summary: Summary;
   professionalExp: ProfessionalExp;
   skills: Skills;
+  otherInfo: OtherInfo;
 }
 
 interface General {
@@ -31,6 +38,7 @@ interface General {
   requiredMail: string;
   mailFormat: string;
   and: string;
+  languages: string;
 }
 interface Mail {
   successMsg: string;
@@ -94,4 +102,18 @@ interface Skills {
   monthsString: string;
   yearsOfExp: string;
   skill: string;
+}
+
+interface OtherInfo {
+  nativeLevel: string;
+  professionalLevel: string;
+  catalan: string;
+  spanish: string;
+  english: string;
+  mobility: string;
+  licenses: string;
+  vehicle: string;
+  motorcycle: string;
+  car: string;
+  mobilityAvail: string;
 }

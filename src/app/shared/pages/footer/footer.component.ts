@@ -17,7 +17,7 @@ export class FooterComponent implements OnInit {
     this.items = [
       {
         icon: 'pi pi-envelope',
-        routerLink: '/cv/send-email',
+        routerLink: '/send-email',
       },
       {
         icon: 'fab fa-linkedin',

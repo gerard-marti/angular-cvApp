@@ -34,27 +34,27 @@ export class MenuComponent implements OnInit {
       {
         label: this.ms.transaltions.dockMenu.summary,
         icon: "assets/dock/info-svgrepo-com.svg",
-        routerLink: 'cv/main'
+        routerLink: 'main'
       },
       {
         label: this.ms.transaltions.dockMenu.studies,
         icon: "assets/dock/student-hat-svgrepo-com.svg",
-        routerLink: 'cv/studies'
+        routerLink: 'studies'
       },
       {
         label: this.ms.transaltions.dockMenu.prof_exp,
         icon: "assets/dock/job-search-svgrepo-com.svg",
-        routerLink: 'cv/professional-exp'
+        routerLink: 'professional-exp'
       },
       {
         label: this.ms.transaltions.dockMenu.skills,
         icon: "assets/dock/settings-svgrepo-com.svg",
-        routerLink: 'cv/skills'
+        routerLink: 'skills'
       },
       {
         label: this.ms.transaltions.dockMenu.other,
         icon: "assets/dock/contact-svgrepo-com.svg",
-        routerLink: 'cv/other-info'
+        routerLink: 'other-info'
       }
     ];
   }

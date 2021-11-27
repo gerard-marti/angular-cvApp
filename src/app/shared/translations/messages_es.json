@@ -4,7 +4,7 @@
     "studies"   :   "Estudios",
     "prof_exp"  :   "Experiencia profesional",
     "skills"    :   "Habilidades",
-    "other"     :   "Otra información"
+    "other"     :   "Información de interés"
   },
   "form": {
     "name"        :   "Nombre",
@@ -34,7 +34,8 @@
     "requiredField": "Este campo es obligatorio",
     "requiredMail"  : "El correo es obligatorio",
     "mailFormat"    : "El correo tiene un formato incorrecto",
-    "and"           : "y"
+    "and"           : "y",
+    "languages"     : "idiomas"
   },
   "studies" : {
     "officialStudies"       : "Estudios oficiales" ,
@@ -61,5 +62,18 @@
     "monthsString": "meses",
     "yearsOfExp"  : "Años de experiencia",
     "skill"       : "Habilidad"
+  },
+  "otherInfo": {
+    "nativeLevel"       : "Nativo",
+    "professionalLevel" : "B2 - Profesional",
+    "catalan"           : "Catalán",
+    "spanish"           : "Castellano",
+    "english"           : "Inglés",
+    "mobility"          : "Movilidad",
+    "licenses"          : "Permisos",
+    "vehicle"           : "Vehículo",
+    "motorcycle"        : "Moto",
+    "car"               : "Coche",
+    "mobilityAvail"     : "Disponibilidad de mobilidad"
   }
 }
