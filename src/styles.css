@@ -45,7 +45,16 @@ html, body {
   z-index: 9999999;
   top: 0;
   padding-top: 3%;
+  padding-bottom: 1%;
   background-color: var(--surface-b);
+}
+
+.footerMenu {
+  position: fixed;
+  width: 90%;
+  z-index: 9999999;
+  bottom: 70px;
+  /*padding-bottom: 6%;*/
 }
 
 .p-menu-overlay {
@@ -53,7 +62,7 @@ html, body {
 }
 
 .componentMarginTop {
-  margin-top: 10% !important;
+  margin-top: 13% !important;
 }
 
 @media screen and (max-width: 430px){
