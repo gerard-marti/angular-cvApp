@@ -91,7 +91,8 @@ interface Summary {
 }
 
 interface ProfessionalExp {
-  dialogContentIdiada: string;
+  dialogContentIdiadaSD: string;
+  dialogContentIdiadaACE: string;
   dialogContentVW: string;
 }
 

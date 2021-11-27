@@ -42,7 +42,7 @@ html, body {
 .navbarMenu {
   position: fixed;
   width: 90%;
-  z-index: 9999999;
+  z-index: 1099;
   top: 0;
   padding-top: 3%;
   padding-bottom: 1%;
@@ -52,7 +52,7 @@ html, body {
 .footerMenu {
   position: fixed;
   width: 90%;
-  z-index: 9999999;
+  z-index: 1099;
   bottom: 70px;
   /*padding-bottom: 6%;*/
 }

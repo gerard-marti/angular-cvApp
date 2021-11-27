@@ -13,7 +13,8 @@ export class ProfesionalExpComponent implements OnInit {
   experience: any[] = [];
   dialogHeader: string = '';
   dialogContent: string = '';
-  dialogContentIdiada1: string = '';
+  dialogContentIdiadaSD: string = '';
+  dialogContentIdiadaACE: string = '';
   dialogContentVW: string = '';
   displayDialog: boolean = false;
 
@@ -31,14 +32,17 @@ export class ProfesionalExpComponent implements OnInit {
 
   updateTexts() {
     this.readMoreText = this.ms.transaltions.general.readMore;
-    this.dialogContentIdiada1 = this.ms.transaltions.professionalExp.dialogContentIdiada;
+    this.dialogContentIdiadaSD = this.ms.transaltions.professionalExp.dialogContentIdiadaSD;
+    this.dialogContentIdiadaACE = this.ms.transaltions.professionalExp.dialogContentIdiadaACE;
     this.dialogContentVW = this.ms.transaltions.professionalExp.dialogContentVW;
     this.experience = [
       {status: 'Senior Software Developer', date: '01/2022 - Act.', center:'Applus+ Idiada',
         icon: 'fas fa-laptop-code', color: '#fc6a21', image: 'assets/studies/Applus+_IDIADA_Logo.svg.png'},
       {status: 'Senior Software Developer', date: '06/2021 - 12/2021', center:'Volkswagen Group Services', dialogContent: this.dialogContentVW,
         icon: 'fas fa-laptop-code', color: '#1b98a6', image: 'assets/studies/1524492195555.jfif'},
-      {status: 'Software Developer & Automotive Cybersecurity Engineer', date: '07/2018 - 06/2021', center:'Applus+ Idiada', dialogContent: this.dialogContentIdiada1,
+      {status: ' Automotive Cybersecurity Engineer', date: '11/2020 - 06/2021', center:'Applus+ Idiada', dialogContent: this.dialogContentIdiadaACE,
+        icon: 'fas fa-laptop-code', color: '#fc6a21', image: 'assets/studies/Applus+_IDIADA_Logo.svg.png'},
+      {status: 'Software Developer', date: '07/2018 - 11/2020', center:'Applus+ Idiada', dialogContent: this.dialogContentIdiadaSD,
         icon: 'fas fa-laptop-code', color: '#fc6a21', image: 'assets/studies/Applus+_IDIADA_Logo.svg.png'},
     ]
   }

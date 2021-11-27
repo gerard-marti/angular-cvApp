@@ -40,7 +40,7 @@
   </ng-template>
 </p-carousel>
 
-<p-dialog [(visible)]="display" [modal]="true">
+<p-dialog [(visible)]="display" [modal]="true" [dismissableMask]="true" [draggable]="false" [resizable]="false">
   <p-image [src]="dialogImageUrl"
            alt="Certificate" width="250" [preview]="true"></p-image>
 </p-dialog>
