@@ -39,13 +39,38 @@ html, body {
   height: 96%
 }
 
+.navbarMenu {
+  position: fixed;
+  width: 90%;
+  z-index: 9999999;
+  top: 0;
+  padding-top: 3%;
+  background-color: var(--surface-b);
+}
+
+.p-menu-overlay {
+  left: 36px !important;
+}
+
+.componentMarginTop {
+  margin-top: 10% !important;
+}
+
 @media screen and (max-width: 430px){
   .contact-dial{
     right: -20px;
   }
 
-
   .dialogClass > div > div{
     width: 90vw !important;
   }
+
+  .navbarMenu {
+    padding-top: 7%;
+  }
+
+  .componentMarginTop {
+    margin-top: 23% !important;
+  }
+
 }
