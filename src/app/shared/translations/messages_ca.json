@@ -54,7 +54,9 @@
   "professionalExp": {
     "dialogContentIdiadaSD"   : "<b>Software Developer (Jul 2018 - Nov 2020)</b><br>Desenvolupament d'aplicacions web basades en Java, utilitzant metodologies àgils com Scrum.<br> També s'ha desenvolupat en React<br><br>Ús de diferents tecnologies com:<ul> <li> Springboot, struts</li><li> Primefaces</li><li> Git</li><li> Maven</li><li> Hibernate, Microsoft SQL</li><li> Entre d'altres</li></ul>",
     "dialogContentIdiadaACE"  : "<b>Automotive Cybersecurity Engineer (Nov 2020 - Jun 2021)</b><br><ul><li>Expert en ciberseguretat de Automoció en ISO/SAE 21434.</li> <li>Gap Analysis, Threat Analysis Risk Assessment (TARA) i Cybersecurity Management System (CSMS). </li><li>Software Updates Management System (SUMS). </li><li>UN R.155 and UN R.156.</li>",
-    "dialogContentVW"         : "<b>Senior Software Developer (Jun 2021 - Des 2021)</b><br>Desenvolupament d'aplicacions web basades en Java, utilitzant metodologies àgils com Scrum.<br><br>Ús de diferents tecnologies com:<ul> <li>JSF</li><li>Git</li><li>Maven</li><li>Hibernate</li><li>Oracle & PLSQL</li><li>Liberty</li><li>Entre d'altres</li> </ul><br>"
+    "dialogContentVW"         : "<b>Senior Software Developer (Jun 2021 - Des 2021)</b><br>Desenvolupament d'aplicacions web basades en Java, utilitzant metodologies àgils com Scrum.<br><br>Ús de diferents tecnologies com:<ul> <li>JSF</li><li>Git</li><li>Maven</li><li>Hibernate</li><li>Oracle & PLSQL</li><li>Liberty</li><li>Entre d'altres</li> </ul><br>",
+    "careerPath"              : "Trajectòria professional",
+    "volunteering"            : "Voluntariat"
   },
   "skills": {
     "yearString" : "any",

@@ -94,6 +94,8 @@ interface ProfessionalExp {
   dialogContentIdiadaSD: string;
   dialogContentIdiadaACE: string;
   dialogContentVW: string;
+  careerPath: string;
+  volunteering: string;
 }
 
 interface Skills {

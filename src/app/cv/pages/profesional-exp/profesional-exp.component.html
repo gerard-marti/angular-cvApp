@@ -1,19 +1,41 @@
-<div class="card border-0 mt-3">
-  <p-timeline [value]="experience" align="alternate" styleClass="customized-timeline  mt-5 mb-5 ">
-    <ng-template pTemplate="marker" let-event>
-            <span class="custom-marker p-shadow-2" [style.backgroundColor]="event.color">
-                <i [ngClass]="event.icon"></i>
-            </span>
-    </ng-template>
-    <ng-template pTemplate="content" let-experience>
-      <p-card [header]="experience.status" subheader="{{experience.date}} - {{experience.center}}">
-        <img *ngIf="experience.image" [src]="experience.image" [alt]="experience.name" width="200" class="p-shadow-2 ms-2 me-2" />
-        <br>
-        <button *ngIf="experience.dialogContent" pButton [label]="readMoreText" (click)="setVariables(experience);" class="p-button-text mt-3"></button>
-      </p-card>
-    </ng-template>
-  </p-timeline>
-</div>
+<p-tabView class="marginTopInnerDiv">
+  <p-tabPanel [header]="tab1Title">
+    <div class="card border-0 mt-3">
+      <p-timeline [value]="experience" align="alternate" styleClass="customized-timeline  mt-5 mb-5 ">
+        <ng-template pTemplate="marker" let-event>
+                <span class="custom-marker p-shadow-2" [style.backgroundColor]="event.color">
+                    <i [ngClass]="event.icon"></i>
+                </span>
+        </ng-template>
+        <ng-template pTemplate="content" let-experience>
+          <p-card [header]="experience.status" subheader="{{experience.date}} - {{experience.center}}">
+            <img *ngIf="experience.image" [src]="experience.image" [alt]="experience.name" width="200" class="p-shadow-2 ms-2 me-2" />
+            <br>
+            <button *ngIf="experience.dialogContent" pButton [label]="readMoreText" (click)="setVariables(experience);" class="p-button-text mt-3"></button>
+          </p-card>
+        </ng-template>
+      </p-timeline>
+    </div>
+  </p-tabPanel>
+  <p-tabPanel [header]="tab2Title">
+    <div class="card border-0 mt-3">
+      <p-timeline [value]="volunteering" align="alternate" styleClass="customized-timeline  mt-5 mb-5 ">
+        <ng-template pTemplate="marker" let-event>
+                <span class="custom-marker p-shadow-2" [style.backgroundColor]="event.color">
+                    <i [ngClass]="event.icon"></i>
+                </span>
+        </ng-template>
+        <ng-template pTemplate="content" let-experience>
+          <p-card [header]="experience.status" subheader="{{experience.date}} - {{experience.center}}">
+            <img *ngIf="experience.image" [src]="experience.image" [alt]="experience.name" width="200" class="p-shadow-2 ms-2 me-2" />
+            <br>
+            <button *ngIf="experience.appUrl" pButton [label]="readMoreText" (click)="goToLink(experience.appUrl);" class="p-button-text mt-3"></button>
+          </p-card>
+        </ng-template>
+      </p-timeline>
+    </div>
+  </p-tabPanel>
+</p-tabView>
 
 <p-dialog [header]="dialogHeader" [(visible)]="displayDialog" [modal]="true" [style]="{width: '50vw'}"
           [draggable]="false" [resizable]="false" class="dialogClass" [dismissableMask]="true">

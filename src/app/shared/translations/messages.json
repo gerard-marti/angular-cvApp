@@ -54,7 +54,9 @@
   "professionalExp": {
     "dialogContentIdiadaSD"   : "<b>Software Developer (Jul 2018 - Nov 2020)</b><br>Web applications development Java based using agile metodologies like Scrum.<br> Also small developments with React<br><br>Using different technologies as:<ul> <li> Springboot, struts</li><li> Primefaces</li><li> Git</li><li> Maven</li><li> Hibernate, Microsoft SQL</li><li> And others</li></ul>",
     "dialogContentIdiadaACE"  : "<b>Automotive Cybersecurity Engineer (Nov 2020 - Jun 2021)</b><br><ul><li>Automotive cybersecurity expert on ISO/SAE 21434.</li> <li>Gap Analysis, Threat Analysis Risk Assessment (TARA) and Cybersecurity Management System (CSMS). </li><li>Software Updates Management System (SUMS). </li><li>UN R.155 and UN R.156.</li>",
-    "dialogContentVW"         : "<b>Senior Software Developer (Jun 2021 - Dec 2021)</b><br>Web applications development Java based using agile metodologies like Scrum.<br><br>Using different technologies as:<ul> <li>JSF</li><li>Git</li><li>Maven</li><li>Hibernate</li><li>Oracle & PLSQL</li><li>Liberty</li><li>And others</li> </ul><br>"
+    "dialogContentVW"         : "<b>Senior Software Developer (Jun 2021 - Dec 2021)</b><br>Web applications development Java based using agile metodologies like Scrum.<br><br>Using different technologies as:<ul> <li>JSF</li><li>Git</li><li>Maven</li><li>Hibernate</li><li>Oracle & PLSQL</li><li>Liberty</li><li>And others</li> </ul><br>",
+    "careerPath"              : "Career Path",
+    "volunteering"            : "Volunteering"
   },
   "skills": {
     "yearString" : "year",
