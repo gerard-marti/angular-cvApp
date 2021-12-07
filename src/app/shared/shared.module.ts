@@ -7,6 +7,7 @@ import {PrimeNgModule} from "../prime-ng/prime-ng.module";
 import {FontAwesomeModule} from "@fortawesome/angular-fontawesome";
 import {ErrorMsgDirective} from "./directives/error-msg.directive";
 import { FooterComponent } from './pages/footer/footer.component';
+import {FormsModule} from "@angular/forms";
 
 
 @NgModule({
@@ -23,11 +24,12 @@ import { FooterComponent } from './pages/footer/footer.component';
         FooterComponent,
         MenuComponent
     ],
-  imports: [
-    CommonModule,
-    PrimeNgModule,
-    FontAwesomeModule
-  ]
+    imports: [
+        CommonModule,
+        PrimeNgModule,
+        FontAwesomeModule,
+        FormsModule
+    ]
 })
 export class SharedModule {
 }

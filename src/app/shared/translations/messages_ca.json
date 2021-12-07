@@ -35,7 +35,8 @@
     "requiredMail"  : "El correu és obligatori",
     "mailFormat"    : "El correu té un format incorrecte",
     "and"           : "i",
-    "languages"     : "idiomes"
+    "languages"     : "idiomes",
+    "download"      : "Descarregar"
   },
   "studies" : {
     "officialStudies"       : "Estudis oficials" ,

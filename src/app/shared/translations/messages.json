@@ -35,7 +35,8 @@
     "requiredMail"  : "Email is mandatory",
     "mailFormat"    : "Email has an incorrect format",
     "and"           : "and",
-    "languages"     : "languages"
+    "languages"     : "languages",
+    "download"      : "Download"
   },
   "studies" : {
     "officialStudies"       : "Official studies" ,

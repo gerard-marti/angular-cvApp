@@ -2,8 +2,9 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
+  // {path: 'auth', loadChildren: () => import('./auth/auth.module').then(c => c.AuthModule)},
   {path: '', loadChildren: () => import('./cv/cv.module').then(c => c.CvModule)},
-  {path: '**', redirectTo: 'cv'}
+  {path: '**', redirectTo: ''}
 ];
 
 @NgModule({

@@ -18,4 +18,12 @@ export class SessionStorageService {
     sessionStorage.setItem(key, data);
     this.storageSub.next(`${key} changed with ${data}`);
   }
+
+  getItem(key: string) {
+    return sessionStorage.getItem(key);
+  }
+
+  removeItem(key: string) {
+    sessionStorage.removeItem(key);
+  }
 }

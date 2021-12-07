@@ -5,7 +5,8 @@
 export const environment = {
   production: false,
   baseUrl: "http://localhost:4000",
-  mailReceiver: "gerardmarti6@gmail.com"
+  mailReceiver: "gerardmarti6@gmail.com",
+  authMails: ["gerardmarti6@gmail.com", "meri199516@gmail.com"]
 };
 
 /*

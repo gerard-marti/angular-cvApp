@@ -9,13 +9,13 @@ import {EmailComponent} from "./pages/email/email.component";
 
 const routes: Routes = [
   {path: '', children: [
-      {path: 'main', component: MainComponent},
+      {path: '', component: MainComponent, pathMatch: 'full'},
       {path: 'professional-exp', component: ProfesionalExpComponent},
       {path: 'skills', component: SkillsComponent},
       {path: 'studies', component: StudiesComponent},
       {path: 'other-info', component: OtherInfoComponent},
       {path: 'send-email', component: EmailComponent},
-      {path: '**', redirectTo: 'main'}
+      {path: '**', redirectTo: ''}
     ]}
 ];
 

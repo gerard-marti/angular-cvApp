@@ -1,0 +1,9 @@
+<div class="container" style="max-width: 550px">
+  <h2 class="text-center mb-5">Private Login, get out.</h2>
+
+  <div *ngIf="isLoggedIn === false">
+    <div>
+      <button type="button" (click)="loginWithGoogle()" class="btn btn-danger">Login with Google</button>
+    </div>
+  </div>
+</div>

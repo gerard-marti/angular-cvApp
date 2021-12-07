@@ -1,4 +1,4 @@
-export interface EmailResponseInterface {
+export interface ResponseInterface {
   ok: boolean;
   message: string;
 }
@@ -39,6 +39,7 @@ interface General {
   mailFormat: string;
   and: string;
   languages: string;
+  download: string;
 }
 interface Mail {
   successMsg: string;
