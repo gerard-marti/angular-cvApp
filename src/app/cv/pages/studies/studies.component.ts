@@ -51,7 +51,9 @@ export class StudiesComponent implements OnInit {
     ]
     this.unOfficialStudies = [
       {status: this.ms.transaltions.studies.unOfficialStudyTitle1, date: '11/2021', center:'Udemy',
-        icon: 'fab fa-angular', color: '#ed0707', image: 'assets/studies/Udemy_logo.svg', readMore: 'https://www.udemy.com/certificate/UC-be20a6c7-123d-461f-b667-7fa060601a99/'}
+        icon: 'fab fa-angular', color: '#ed0707', image: 'assets/studies/Udemy_logo.svg', readMore: 'https://www.udemy.com/certificate/UC-be20a6c7-123d-461f-b667-7fa060601a99/'},
+      {status: 'AWS Cloud Technical Essentials', date: '12/2021', center:'Coursera',
+        icon: 'fab fa-aws', color: '#ed6707', image: 'assets/studies/coursera_logo.png', readMore: 'https://www.coursera.org/account/accomplishments/certificate/QK6YUVVDBJG5'}
     ]
 
   }
